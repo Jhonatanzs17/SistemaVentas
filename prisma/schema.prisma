@@ -13,11 +13,8 @@ model clientes {
   cuenta        String          @unique @db.VarChar(255)
   telefono      String?         @db.VarChar(255)
   correo        String?         @db.VarChar(255)
-  instagram     String?         @db.VarChar(255)
-  x             String?         @db.VarChar(255)
-  youtube       String?         @db.VarChar(255)
-  facebook      String?         @db.VarChar(255)
   estado        Int
+  id_usuario    Int
   pagos         pagos[]
   venta_detalle venta_detalle[]
 }
@@ -75,6 +72,7 @@ model productos {
   precio_compra Decimal         @db.Money
   precio_venta  Decimal         @db.Money
   stock         Int
+  id_usuario    Int
   venta_detalle venta_detalle[]
 }
 
